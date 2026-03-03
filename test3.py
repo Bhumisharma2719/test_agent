@@ -1,28 +1,26 @@
-# Complex Buggy Program
-
 numbers = [2, 4, 6, 8]
 
 total = 0
 
-for i in range(6):   # ❌ IndexError
+for i in range(len(numbers)):   
     total += numbers[i]
 
 print("Total:", total)
 
 x = "10"
-y = 0
+y = 1
 
-result = int(x) / y   # ❌ ZeroDivisionError
+result = int(x) / y   
 print("Division:", result)
 
-if total > 10         # ❌ SyntaxError (missing colon)
+if total > 10:         
     print("Big total")
 
-average = total / count   # ❌ NameError (count not defined)
+average = total / len(numbers)   
 print("Average:", average)
 
-name = input("Enter name: ")   # ❌ Blocking input
-print("Hello " + username)     # ❌ NameError (username not defined)
+name = "Test User"   
+print("Hello " + name)     
 
-data = None
-print(len(data))   # ❌ TypeError
+data = []
+print(len(data))
