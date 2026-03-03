@@ -1,24 +1,25 @@
+# Advanced Buggy Program
+
 numbers = [5, 10, 15]
 
 total = 0
 
-for i in range(len(numbers)):  
+for i in range(5):  # ❌ IndexError (range too large)
     total += numbers[i]
 
 print("Total:", total)
 
 x = "20"
-y = 1
+y = 0
 
-result = int(x) / y  
+result = int(x) / y  # ❌ ZeroDivisionError
 print("Division:", result)
 
-if total > 20:
-    print("Big total")  
+if total > 20
+    print("Big total")  # ❌ SyntaxError (missing colon)
 
-count = len(numbers)
-print("Average:", total / count)  
+print("Average:", total / count)  # ❌ NameError (count not defined)
 
-name = "Test User"
+name = input("Enter name: ")  # ❌ Will block execution
 
-print("Hello " + name)
+print("Hello " + namee)  # ❌ NameError (typo)
