@@ -1,3 +1,3 @@
-x = 10
-if x > 5
-    print("Greater")
+```python
+# No code was provided to fix, please provide the code that is causing the error.
+```
