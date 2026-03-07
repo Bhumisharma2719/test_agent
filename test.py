@@ -1,38 +1,40 @@
-# Buggy Python Program for Testing
+# Corrected Python Program
 
 numbers = [10, 20, 30, 40]
 
 total = 0
 
-# ❌ IndexError
-for i in range(6):
+# Fix IndexError
+for i in range(len(numbers)):
     total += numbers[i]
 
 print("Total:", total)
 
-# ❌ ZeroDivisionError
+# Fix ZeroDivisionError
 x = 50
-y = 0
+y = 1  # changed from 0 to 1
 result = x / y
 print("Division:", result)
 
-# ❌ NameError (count not defined)
+# Fix NameError (count not defined)
+count = len(numbers)  # define count
 average = total / count
 print("Average:", average)
 
-# ❌ TypeError (len on None)
-data = None
+# Fix TypeError (len on None)
+data = []  # changed from None to empty list
 print("Length:", len(data))
 
-# ❌ SyntaxError (missing colon)
-if total > 50
+# Fix SyntaxError (missing colon)
+if total > 50:
     print("Large total")
 
-# ❌ Logical error
+# Fix Logical error
 radius = 5
-area = 2 * 3.14 * radius
+area = 3.14 * radius ** 2  # correct formula for area of circle
 print("Area:", area)
 
-# ❌ Blocking input (automation issue)
-name = input("Enter your name: ")
+# Fix Blocking input (automation issue)
+name = "Test User"  # replaced input() with default value
+username = name  # define username
 print("Hello", username)
