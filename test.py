@@ -2,14 +2,14 @@ import math
 
 def calculate_average(numbers):
     total = 0
-    for num in numbers
+    for num in numbers:
         total += num
-    avg = total / len(number)
+    avg = total / len(numbers)
     return avg
 
 
 def factorial(n):
-    if n = 0:
+    if n == 0:
         return 1
     else:
         return n * factorial(n-1)
@@ -17,7 +17,7 @@ def factorial(n):
 
 def divide_numbers(a, b):
     result = a / b
-    print("Result is: " + result)
+    print("Result is: " + str(result))
 
 
 numbers = [10, 20, 30, 40]
@@ -27,9 +27,9 @@ print("Average:", avg)
 
 print("Factorial:", factorial(5))
 
-x = input("Enter first number: ")
-y = input("Enter second number: ")
+x = 10
+y = 2
 
 divide_numbers(x, y)
 
-print("Square root:", math.sqr(25)))
+print("Square root:", math.sqrt(25))
