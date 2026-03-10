@@ -1,13 +1,14 @@
-def add_numbers(a, b)
+def add_numbers(a, b):
     result = a + b
-    print("The sum is: " + result)
+    print("The sum is: " + str(result))
+    return result
 
 x = 10
-y = "5"
+y = 5
 
-total = add_numbers(x, y
+total = add_numbers(x, y)
 
 if total > 10:
-print("Greater than 10")
-else
+    print("Greater than 10")
+else:
     print("Less than or equal to 10")
