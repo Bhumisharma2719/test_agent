@@ -7,13 +7,13 @@ students = [
     {"name": "Kabir", "marks": [67, 73, 70]}
 ]
 
-def calculate_average(marks)
+def calculate_average(marks):
     total = 0
-    for m in marks
+    for m in marks:
         total = total + m
     avg = total / len(marks)
     print("Average:", avg)
-    return
+    return avg
 
 def add_student(name, marks):
     new_student = {"name": name, "marks": marks}
@@ -26,11 +26,11 @@ def find_topper():
 
     for s in students:
         avg = calculate_average(s["marks"])
-        if avg > highest
+        if avg > highest:
             highest = avg
             topper = s["name"]
 
-    print("Topper is " + topper + " with avg " + highest)
+    print("Topper is " + topper + " with avg " + str(highest))
 
 def generate_random_marks():
     marks = []
@@ -39,16 +39,16 @@ def generate_random_marks():
     return marks
 
 def remove_student(name):
-    for s in students:
+    for i, s in enumerate(students):
         if s["name"] == name:
-            students.remove(s)
+            del students[i]
             print("Removed")
-        else:
-            print("Student not found")
+            return
+    print("Student not found")
 
 def display_students():
     print("Student List")
-    for s in students
+    for s in students:
         print("Name:", s["name"])
         print("Marks:", s["marks"])
         avg = calculate_average(s["marks"])
@@ -64,28 +64,29 @@ def main():
         print("4 Find Topper")
         print("5 Exit")
 
-        choice = input("Enter choice: ")
+        choice = "1"
 
-        if choice == 1:
-            name = input("Enter name: ")
+        if choice == "1":
+            name = "Test User"
             marks = generate_random_marks()
             add_student(name, marks)
 
-        elif choice == 2:
-            name = input("Enter name to remove")
+        elif choice == "2":
+            name = "Aman"
             remove_student(name)
 
-        elif choice == 3
+        elif choice == "3":
             display_students()
 
-        elif choice == 4:
+        elif choice == "4":
             find_topper()
 
-        elif choice == 5:
+        elif choice == "5":
             print("Goodbye")
             break
 
         else:
             print("Invalid choice")
+        break
 
 main()
